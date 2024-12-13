@@ -1,0 +1,181 @@
+<html>
+<head>
+<title>TestNG:  GovStack Automation</title>
+<link href="../testng.css" rel="stylesheet" type="text/css" />
+<link href="../my-testng.css" rel="stylesheet" type="text/css" />
+
+<style type="text/css">
+.log { display: none;} 
+.stack-trace { display: none;} 
+</style>
+<script type="text/javascript">
+<!--
+function flip(e) {
+  current = e.style.display;
+  if (current == 'block') {
+    e.style.display = 'none';
+    return 0;
+  }
+  else {
+    e.style.display = 'block';
+    return 1;
+  }
+}
+
+function toggleBox(szDivId, elem, msg1, msg2)
+{
+  var res = -1;  if (document.getElementById) {
+    res = flip(document.getElementById(szDivId));
+  }
+  else if (document.all) {
+    // this is the way old msie versions work
+    res = flip(document.all[szDivId]);
+  }
+  if(elem) {
+    if(res == 0) elem.innerHTML = msg1; else elem.innerHTML = msg2;
+  }
+
+}
+
+function toggleAllBoxes() {
+  if (document.getElementsByTagName) {
+    d = document.getElementsByTagName('div');
+    for (i = 0; i < d.length; i++) {
+      if (d[i].className == 'log') {
+        flip(d[i]);
+      }
+    }
+  }
+}
+
+// -->
+</script>
+
+</head>
+<body>
+<h2 align='center'>GovStack Automation</h2><table border='1' align="center">
+<tr>
+<td>Tests passed/Failed/Skipped:</td><td>0/3/0</td>
+</tr><tr>
+<td>Started on:</td><td>Mon Nov 04 11:04:50 IST 2024</td>
+</tr>
+<tr><td>Total time:</td><td>295 seconds (295296 ms)</td>
+</tr><tr>
+<td>Included groups:</td><td></td>
+</tr><tr>
+<td>Excluded groups:</td><td></td>
+</tr>
+</table><p/>
+<small><i>(Hover the method name to see the test class name)</i></small><p/>
+<table width='100%' border='1' class='invocation-failed'>
+<tr><td colspan='4' align='center'><b>FAILED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td><b>Attribute(s)</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='org.govstack.runner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: org.govstack.runner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "RG_PF_LIS_BO_08_RG_PF_LIS_BO_09_RG_PF_LIS_BO_10_RG_PF_LIS_BO_11_RG_PF_LIS_BO_01_Validate user is able to create a new Location under Listing", "Park and Facilities Listing GridScenarios"</td>
+<td><div><pre>java.lang.AssertionError: element click intercepted: Element &lt;button class=&quot;e-control e-btn e-lib e-primary&quot; style=&quot;border: 3px solid red;&quot;&gt;...&lt;/button&gt; is not clickable at point (1495, 237). Other element would receive the click: &lt;div class=&quot;e-control e-skeleton e-lib e-skeleton-rectangle e-shimmer-wave&quot; id=&quot;e-skeleton_26&quot; role=&quot;alert&quot; aria-busy=&quot;true&quot; aria-live=&quot;polite&quot; aria-label=&quot;Loading...&quot; style=&quot;width: 100%; height: 40vh;&quot;&gt;&lt;/div&gt;
+  (Session info: chrome=130.0.6723.92)
+Build info: version: &apos;4.20.0&apos;, revision: &apos;866c76ca80&apos;
+System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;22.0.1&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [2852882f158928f2166ce1249226562d, clickElement {id=f.3DD415FAFE6C2A9771D040A834C49244.d.6F138E83582C63F07C200C7ED01CE60F.e.13}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 130.0.6723.92, chrome: {chromedriverVersion: 130.0.6723.91 (53ac07678369..., userDataDir: C:\Users\sjeldu\AppData\Loc...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:50129}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:50129/devtoo..., se:cdpVersion: 130.0.6723.92, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on windows (2852882f158928f2166ce1249226562d)] -&gt; xpath: //button[@class=&apos;e-control e-btn e-lib e-primary&apos;]]
+Session ID: 2852882f158928f2166ce1249226562d
+	at org.govstack.utils.CommonMethods.clickElement(CommonMethods.java:87)
+	at org.govstack.pom.pf.pfListings.pages.PFListingsPage.clickAddLocation(PFListingsPage.java:34)
+	at org.govstack.stepdefinition.pf.StepDefinitions_PF_Listings.user_selects_the_add_location(StepDefinitions_PF_Listings.java:104)
+	at ✽.user selects the add location(file:///D:/Gov_Gurvinder/Main_Branch/src/main/resources/TestCases/Parks%20and%20Facilities/PF_Listings_Grid_TestCases.feature:15)
+... Removed 1 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1234645212", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1234645212'><pre>java.lang.AssertionError: element click intercepted: Element &lt;button class=&quot;e-control e-btn e-lib e-primary&quot; style=&quot;border: 3px solid red;&quot;&gt;...&lt;/button&gt; is not clickable at point (1495, 237). Other element would receive the click: &lt;div class=&quot;e-control e-skeleton e-lib e-skeleton-rectangle e-shimmer-wave&quot; id=&quot;e-skeleton_26&quot; role=&quot;alert&quot; aria-busy=&quot;true&quot; aria-live=&quot;polite&quot; aria-label=&quot;Loading...&quot; style=&quot;width: 100%; height: 40vh;&quot;&gt;&lt;/div&gt;
+  (Session info: chrome=130.0.6723.92)
+Build info: version: &apos;4.20.0&apos;, revision: &apos;866c76ca80&apos;
+System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;22.0.1&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [2852882f158928f2166ce1249226562d, clickElement {id=f.3DD415FAFE6C2A9771D040A834C49244.d.6F138E83582C63F07C200C7ED01CE60F.e.13}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 130.0.6723.92, chrome: {chromedriverVersion: 130.0.6723.91 (53ac07678369..., userDataDir: C:\Users\sjeldu\AppData\Loc...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:50129}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:50129/devtoo..., se:cdpVersion: 130.0.6723.92, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on windows (2852882f158928f2166ce1249226562d)] -&gt; xpath: //button[@class=&apos;e-control e-btn e-lib e-primary&apos;]]
+Session ID: 2852882f158928f2166ce1249226562d
+	at org.testng.Assert.fail(Assert.java:111)
+	at org.govstack.utils.CommonMethods.clickElement(CommonMethods.java:87)
+	at org.govstack.pom.pf.pfListings.pages.PFListingsPage.clickAddLocation(PFListingsPage.java:34)
+	at org.govstack.stepdefinition.pf.StepDefinitions_PF_Listings.user_selects_the_add_location(StepDefinitions_PF_Listings.java:104)
+	at ✽.user selects the add location(file:///D:/Gov_Gurvinder/Main_Branch/src/main/resources/TestCases/Parks%20and%20Facilities/PF_Listings_Grid_TestCases.feature:15)
+</pre></div></td>
+<td>57</td>
+<td>org.govstack.runner.TestRunner@13d73f29</td></tr>
+<tr>
+<td title='org.govstack.runner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: org.govstack.runner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "RG_PF_LIS_BO_08_RG_PF_LIS_BO_09_RG_PF_LIS_BO_10_RG_PF_LIS_BO_11_RG_PF_LIS_BO_01_Validate user is able to create a new Location under Listing", "Park and Facilities Listing GridScenarios"</td>
+<td><div><pre>java.lang.AssertionError: element click intercepted: Element &lt;button class=&quot;e-control e-btn e-lib e-primary&quot; style=&quot;border: 3px solid red;&quot;&gt;...&lt;/button&gt; is not clickable at point (1495, 237). Other element would receive the click: &lt;div class=&quot;e-control e-skeleton e-lib e-skeleton-rectangle e-shimmer-wave&quot; id=&quot;e-skeleton_26&quot; role=&quot;alert&quot; aria-busy=&quot;true&quot; aria-live=&quot;polite&quot; aria-label=&quot;Loading...&quot; style=&quot;width: 100%; height: 40vh;&quot;&gt;&lt;/div&gt;
+  (Session info: chrome=130.0.6723.92)
+Build info: version: &apos;4.20.0&apos;, revision: &apos;866c76ca80&apos;
+System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;22.0.1&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [071a0cebf1585901cb018d0fcc9bac62, clickElement {id=f.A9B2F9A724653BD7257A3B5EF08C7C4E.d.CEA8FA63599E5DEE49495AF6036B7317.e.26}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 130.0.6723.92, chrome: {chromedriverVersion: 130.0.6723.91 (53ac07678369..., userDataDir: C:\Users\sjeldu\AppData\Loc...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:49594}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:49594/devtoo..., se:cdpVersion: 130.0.6723.92, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on windows (071a0cebf1585901cb018d0fcc9bac62)] -&gt; xpath: //button[@class=&apos;e-control e-btn e-lib e-primary&apos;]]
+Session ID: 071a0cebf1585901cb018d0fcc9bac62
+	at org.govstack.utils.CommonMethods.clickElement(CommonMethods.java:87)
+	at org.govstack.pom.pf.pfListings.pages.PFListingsPage.clickAddLocation(PFListingsPage.java:34)
+	at org.govstack.stepdefinition.pf.StepDefinitions_PF_Listings.user_selects_the_add_location(StepDefinitions_PF_Listings.java:104)
+	at ✽.user selects the add location(file:///D:/Gov_Gurvinder/Main_Branch/src/main/resources/TestCases/Parks%20and%20Facilities/PF_Listings_Grid_TestCases.feature:15)
+... Removed 1 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace369139452", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace369139452'><pre>java.lang.AssertionError: element click intercepted: Element &lt;button class=&quot;e-control e-btn e-lib e-primary&quot; style=&quot;border: 3px solid red;&quot;&gt;...&lt;/button&gt; is not clickable at point (1495, 237). Other element would receive the click: &lt;div class=&quot;e-control e-skeleton e-lib e-skeleton-rectangle e-shimmer-wave&quot; id=&quot;e-skeleton_26&quot; role=&quot;alert&quot; aria-busy=&quot;true&quot; aria-live=&quot;polite&quot; aria-label=&quot;Loading...&quot; style=&quot;width: 100%; height: 40vh;&quot;&gt;&lt;/div&gt;
+  (Session info: chrome=130.0.6723.92)
+Build info: version: &apos;4.20.0&apos;, revision: &apos;866c76ca80&apos;
+System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;22.0.1&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [071a0cebf1585901cb018d0fcc9bac62, clickElement {id=f.A9B2F9A724653BD7257A3B5EF08C7C4E.d.CEA8FA63599E5DEE49495AF6036B7317.e.26}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 130.0.6723.92, chrome: {chromedriverVersion: 130.0.6723.91 (53ac07678369..., userDataDir: C:\Users\sjeldu\AppData\Loc...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:49594}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:49594/devtoo..., se:cdpVersion: 130.0.6723.92, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on windows (071a0cebf1585901cb018d0fcc9bac62)] -&gt; xpath: //button[@class=&apos;e-control e-btn e-lib e-primary&apos;]]
+Session ID: 071a0cebf1585901cb018d0fcc9bac62
+	at org.testng.Assert.fail(Assert.java:111)
+	at org.govstack.utils.CommonMethods.clickElement(CommonMethods.java:87)
+	at org.govstack.pom.pf.pfListings.pages.PFListingsPage.clickAddLocation(PFListingsPage.java:34)
+	at org.govstack.stepdefinition.pf.StepDefinitions_PF_Listings.user_selects_the_add_location(StepDefinitions_PF_Listings.java:104)
+	at ✽.user selects the add location(file:///D:/Gov_Gurvinder/Main_Branch/src/main/resources/TestCases/Parks%20and%20Facilities/PF_Listings_Grid_TestCases.feature:15)
+</pre></div></td>
+<td>77</td>
+<td>org.govstack.runner.TestRunner@13d73f29</td></tr>
+<tr>
+<td title='org.govstack.runner.TestRunner.runScenario()'><b>runScenario</b><br>Test class: org.govstack.runner.TestRunner<br>Test method: Runs Cucumber Scenarios<br>Parameters: "RG_PF_LIS_BO_08_RG_PF_LIS_BO_09_RG_PF_LIS_BO_10_RG_PF_LIS_BO_11_RG_PF_LIS_BO_01_Validate user is able to create a new Location under Listing", "Park and Facilities Listing GridScenarios"</td>
+<td><div><pre>java.lang.AssertionError: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//*[@id=&quot;paf-installations-table_content_table&quot;]/tbody/tr/td[2]&quot;}
+  (Session info: chrome=130.0.6723.92)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: &apos;4.20.0&apos;, revision: &apos;866c76ca80&apos;
+System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;22.0.1&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [04e5b5de47ef32cd9d4d9c2398e838bd, findElement {value=//*[@id=&quot;paf-installations-table_content_table&quot;]/tbody/tr/td[2], using=xpath}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 130.0.6723.92, chrome: {chromedriverVersion: 130.0.6723.91 (53ac07678369..., userDataDir: C:\Users\sjeldu\AppData\Loc...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:49836}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:49836/devtoo..., se:cdpVersion: 130.0.6723.92, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 04e5b5de47ef32cd9d4d9c2398e838bd
+	at org.govstack.utils.CommonMethods.highlightElement(CommonMethods.java:62)
+	at org.govstack.utils.CommonMethods.getElementText(CommonMethods.java:292)
+	at org.govstack.pom.pf.pfListings.pages.PFListingsPage.validatePFListingCreated(PFListingsPage.java:92)
+	at org.govstack.stepdefinition.pf.StepDefinitions_PF_Listings.location_should_be_added(StepDefinitions_PF_Listings.java:128)
+	at ✽.location should be added(file:///D:/Gov_Gurvinder/Main_Branch/src/main/resources/TestCases/Parks%20and%20Facilities/PF_Listings_Grid_TestCases.feature:19)
+... Removed 1 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace270550895", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace270550895'><pre>java.lang.AssertionError: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//*[@id=&quot;paf-installations-table_content_table&quot;]/tbody/tr/td[2]&quot;}
+  (Session info: chrome=130.0.6723.92)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: &apos;4.20.0&apos;, revision: &apos;866c76ca80&apos;
+System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;22.0.1&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [04e5b5de47ef32cd9d4d9c2398e838bd, findElement {value=//*[@id=&quot;paf-installations-table_content_table&quot;]/tbody/tr/td[2], using=xpath}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 130.0.6723.92, chrome: {chromedriverVersion: 130.0.6723.91 (53ac07678369..., userDataDir: C:\Users\sjeldu\AppData\Loc...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:49836}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:49836/devtoo..., se:cdpVersion: 130.0.6723.92, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: 04e5b5de47ef32cd9d4d9c2398e838bd
+	at org.testng.Assert.fail(Assert.java:111)
+	at org.govstack.utils.CommonMethods.highlightElement(CommonMethods.java:62)
+	at org.govstack.utils.CommonMethods.getElementText(CommonMethods.java:292)
+	at org.govstack.pom.pf.pfListings.pages.PFListingsPage.validatePFListingCreated(PFListingsPage.java:92)
+	at org.govstack.stepdefinition.pf.StepDefinitions_PF_Listings.location_should_be_added(StepDefinitions_PF_Listings.java:128)
+	at ✽.location should be added(file:///D:/Gov_Gurvinder/Main_Branch/src/main/resources/TestCases/Parks%20and%20Facilities/PF_Listings_Grid_TestCases.feature:19)
+</pre></div></td>
+<td>156</td>
+<td>org.govstack.runner.TestRunner@13d73f29</td></tr>
+</table><p>
+</body>
+</html>

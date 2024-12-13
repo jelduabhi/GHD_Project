@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="All Test Suite"  parallel="methods" data-provider-thread-count="2">
+    <listeners>
+        <listener class-name="org.govstack.listners.TestNGListners"/>
+    </listeners>
+    <test name="GovStack Automation chrome">
+        <parameter name="cucumber.filter.tags" value="@Alerts"/>
+        <parameter name="Browser" value="chrome"/>
+        <parameter name="Environment" value="QA"/>
+        <classes>
+            <class name="org.govstack.runner.TestRunner"/>
+        </classes>
+    </test>
+
+    <test name="GovStack Automation Edge">
+        <parameter name="cucumber.filter.tags" value="@News"/>
+        <parameter name="Browser" value="edge"/>
+        <parameter name="Environment" value="STAGE"/>
+        <classes>
+            <class name="org.govstack.runner.TestRunner"/>
+        </classes>
+    </test>
+</suite>

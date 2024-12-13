@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="All Test Suite"  parallel="methods" data-provider-thread-count="3">
+    <listeners>
+        <listener class-name="org.govstack.listners.TestNGListners_Failed"/>
+    </listeners>
+    <parameter name="cucumber.filter.tags" value="@Regression"/>
+    <test name="GovStack Automation" preserve-order="true">
+        <classes>
+            <class name="org.govstack.runner.TestRunnerFailed"/>
+        </classes>
+    </test>
+</suite>
